@@ -1,0 +1,2 @@
+oracle-java8 source: native-package-with-dash-version
+oracle-java8 source: intra-source-package-circular-dependency oracle-java8-bin oracle-java8-jre

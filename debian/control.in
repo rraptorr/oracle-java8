@@ -1,0 +1,105 @@
+Source: @basename@
+Section: non-free/java
+Priority: optional
+Maintainer: Janusz Dziemidowicz <rraptorr@nails.eu.org>
+Homepage: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+Build-Depends: debhelper (>= 6), lsb-release, unzip, bzip2, patch, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxt6, libxtst6, libxrender1
+Standards-Version: 3.9.3
+
+Package: @basename@-jre
+Section: non-free/java
+Architecture: all
+Provides: java-virtual-machine, java-runtime, java2-runtime, java5-runtime, java6-runtime, java7-runtime, java8-runtime, java-runtime-headless, java2-runtime-headless, java5-runtime-headless, java6-runtime-headless, java7-runtime-headless, java8-runtime-headless
+Depends: java-common (>= 0.28), locales, @basename@-bin (>= ${source:Version}), ${misc:Depends}
+Recommends: gsfonts-x11
+Suggests: @basename@-plugin, @basename@-fonts, @cjk_fonts@
+Replaces: @basename@-bin
+Description: @vendor@ Java(TM) Runtime Environment (JRE) @RELEASE@ (architecture independent files)
+ The @vendor@ Java Platform Standard Edition Runtime Environment (JRE) @RELEASE@
+ contains the Java virtual machine, runtime class libraries, and 
+ Java application launcher that are necessary to run programs written 
+ in the Java progamming language. It is not a development environment and
+ doesn't contain development tools such as compilers or debuggers.
+ For development tools, see the Java Development Kit JDK(TM) @RELEASE@
+ (package @basename@-jdk).
+ .
+ This package contains architecture independent files.
+
+Package: @basename@-bin
+Section: non-free/java
+Architecture: amd64 i386
+Depends: @basename@-jre (>= ${source:Version}), ${odbc:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Recommends: ${shlibs:Recommends}
+Suggests: binfmt-support
+Description: @vendor@ Java(TM) Runtime Environment (JRE) @RELEASE@ (architecture dependent files)
+ The @vendor@ Java Platform Standard Edition Runtime Environment (JRE) @RELEASE@
+ contains the Java virtual machine, runtime class libraries, and 
+ Java application launcher that are necessary to run programs written 
+ in the Java progamming language. It is not a development environment and
+ doesn't contain development tools such as compilers or debuggers.
+ For development tools, see the Java Development Kit JDK(TM) @RELEASE@
+ (package @basename@-jdk).
+ .
+ This package contains architecture dependent files.
+
+Package: @basename@-plugin
+Architecture: amd64 i386
+Section: non-free/web
+Priority: optional
+Depends: ${shlibs:Depends}, ${misc:Depends}, @basename@-bin (>= ${source:Version}), @browsers@
+Description: Java(TM) Plug-in, Java SE @RELEASE@
+ Java Plug-in enables applets written to the Java Platform @RELEASE@ 
+ specification to be run in Mozilla and other web browsers. 
+ Java Plug-in comes with the Java Runtime Environment (JRE).
+ .
+ This is a metapackage containing dependencies for running Java in 
+ various browsers.
+
+Package: @basename@-fonts
+Section: non-free/fonts
+Architecture: all
+Depends: @JRE@ (>= ${source:Version}), ${misc:Depends}
+Provides: ttf-lucida
+Conflicts: ttf-lucida
+Description: Lucida TrueType fonts (from the @vendor@ JRE)
+ The Lucida fonts are included in the @JRE@ package.
+ This package makes the fonts available to system.
+
+Package: @basename@-jdk
+Architecture: amd64 i386
+Depends: @basename@-bin (>= ${source:Version}), ${shlibs:Depends}, ${misc:Depends}
+Suggests: default-jdk-doc, @basename@-source
+Provides: java-compiler, java2-compiler, java-sdk, java2-sdk, java5-sdk, java6-sdk, java7-jdk, java8-jdk
+Description: @vendor@ Java(TM) Development Kit (JDK) @RELEASE@
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ The JDK includes tools useful for developing and testing programs 
+ written in the Java programming language and running on the Java 
+ Platform.
+
+Package: @basename@-source
+Architecture: all
+Depends: @basename@-jdk (>= ${source:Version}), ${misc:Depends}
+Description: @vendor@ Java(TM) Development Kit (JDK) @RELEASE@ source files
+ The JDK(TM) is a development environment for building applications, 
+ applets, and components using the Java programming language.
+ .
+ This package contains the Java programming language source 
+ files (src.zip) for all classes that make up the Java core API.
+
+Package: @basename@-javadb
+Architecture: all
+Section: non-free/java
+Depends: @basename@-jdk (>= ${source:Version}), ${misc:Depends}
+Enhances: @basename@-jdk
+Description: Java(TM) DB, Oracle's distribution of Apache Derby
+ Java DB is Oracle's supported distribution of the open source Apache 
+ Derby 100% Java technology database. It is fully transactional, secure, 
+ easy-to-use, standards-based -- SQL, JDBC API, and Java EE -- yet small, 
+ only 2MB.
+ .
+ This package adds the optional Java DB to your JDK 6 installation.
+ .
+ For more information, check out the Java DB website:
+ http://www.oracle.com/technetwork/java/javadb/overview/index.html

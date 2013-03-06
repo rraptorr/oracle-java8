@@ -1,0 +1,13 @@
+#!/bin/sh -e
+
+jdk_tools='@jdk_tools@'
+basediralias=/@basediralias@
+
+
+if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
+    for i in $jdk_tools; do
+	update-alternatives --remove $i $basediralias/bin/$i
+    done
+fi
+
+#DEBHELPER#

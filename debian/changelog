@@ -1,0 +1,5 @@
+oracle-java8 (8.0-b79) UNRELEASED; urgency=low
+
+  * Initial Java 8 package
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 06 Mar 2013 02:04:24 +0100

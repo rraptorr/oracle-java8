@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=@vendor@ Java @RELEASE@ Policy Tool
+Comment=@vendor@ Java @RELEASE@ Policy Tool
+Exec=/@basedir@/bin/policytool
+Terminal=false
+Type=Application
+Icon=@basename@
+Categories=Settings;
