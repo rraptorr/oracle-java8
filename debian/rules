@@ -29,7 +29,7 @@ javaname	:= $(shell echo $(word 2, $(dirparts)) | sed 's/[0-9.]*$$//')
 RELEASE		:= $(shell echo $(word 2, $(dirparts)) | sed 's/^[[:alpha:]]*//')
 PRODUCT		:= $(javaname)$(RELEASE)
 basename	:= $(VENDOR)-$(PRODUCT)
-dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\),\1,p' | tr '.-' ' ')
+dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\),\1,p' | tr '~.-' ' ')
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
@@ -37,7 +37,7 @@ unpackdir	:= jdk$(jdkversion)
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(word 3, $(dirpartsv))
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)-jdk
-bin_pattern	:= jdk-$(version)-ea-bin-b79-linux-%-28_feb_2013.tar.gz
+bin_pattern	:= jdk-$(version)-ea-bin-$(word 3, $(dirpartsv))-linux-%-28_feb_2013.tar.gz
 priority	:= 43
 
 basedir		:= $(TOP)/$(jdirname)

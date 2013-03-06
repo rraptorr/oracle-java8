@@ -11,9 +11,6 @@ So far packages were tested on following Debian versions:
 - wheezy i386/amd64
 - squeeze i386/amd64
 
-New users of Debian Wheezy should cosider using java-package:
-http://wiki.debian.org/JavaPackage
-
 Packages are compatible with "official" Debian ones of Java 6, but
 have a lower priority (use update-java-alternatives if you have Java 6
 already installed).
