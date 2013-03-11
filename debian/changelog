@@ -1,4 +1,10 @@
-oracle-java8 (8.0~b79-1) UNRELEASED; urgency=low
+oracle-java8 (8.0~b80-1) unstable; urgency=low
+
+  * Build b80
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 11 Mar 2013 10:27:56 +0100
+
+oracle-java8 (8.0~b79-1) unstable; urgency=low
 
   * Initial Java 8 package
 
