@@ -37,7 +37,7 @@ unpackdir	:= jdk$(jdkversion)
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(word 3, $(dirpartsv))
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)-jdk
-bin_pattern	:= jdk-$(version)-ea-bin-$(word 3, $(dirpartsv))-linux-%-21_mar_2013.tar.gz
+bin_pattern	:= jdk-$(version)-ea-bin-$(word 3, $(dirpartsv))-linux-%-28_mar_2013.tar.gz
 priority	:= 43
 
 basedir		:= $(TOP)/$(jdirname)
