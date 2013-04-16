@@ -1,3 +1,9 @@
+oracle-java8 (8.0~b84-1) unstable; urgency=low
+
+  * Build b84
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 17 Apr 2013 00:43:51 +0200
+
 oracle-java8 (8.0~b83-1) unstable; urgency=low
 
   * Build b83
