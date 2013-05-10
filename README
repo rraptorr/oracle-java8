@@ -8,8 +8,8 @@ Java 8 packages for Debian.
 2. Supported Debian versions
 
 So far packages were tested on following Debian versions:
+- jessie i386/amd64
 - wheezy i386/amd64
-- squeeze i386/amd64
 
 Packages are compatible with "official" Debian ones of Java 6, but
 have a lower priority (use update-java-alternatives if you have Java 6

@@ -236,7 +236,7 @@ unpack-$(arch)-stamp: unpack-%-stamp: $(bin_pattern)
 	: # fix permissions
 	-find $*-jdk -name '*.properties' -o -name '*.properties.ja' -o -name '*.xml' -o -name '*.bat' \
 	  -o -name '*.jar' -o -name '*.src' -o -name '*.bfc' -o -name '*.txt' -o -name '*.cfg' \
-	  -o -name 'classlist' -o -name 'currency.data' -o -name 'meta-index' | xargs chmod 644
+	  -o -name 'classlist' -o -name 'currency.data' -o -name 'meta-index' -o -name '*.dat' | xargs chmod 644
 
 	touch $@
 
