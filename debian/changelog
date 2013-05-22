@@ -1,3 +1,10 @@
+oracle-java8 (8.0~b90-1) unstable; urgency=low
+
+  * Build b90
+  * Remove obsolete Ubuntu rules
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 22 May 2013 10:34:46 +0200
+
 oracle-java8 (8.0~b88-1) unstable; urgency=low
 
   * Build b88
