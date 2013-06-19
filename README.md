@@ -30,8 +30,8 @@ To create packages on your own:
 - apt-get install dpkg-dev
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
-- Download jdk-8-ea-bin-b92-linux-i586-30_may_2013.tar.gz or
-  jdk-8-ea-bin-b92-linux-x64-30_may_2013.tar.gz from
+- Download jdk-8-ea-bin-b94-linux-i586-13_jun_2013.tar.gz or
+  jdk-8-ea-bin-b94-linux-x64-13_jun_2013.tar.gz from
   <http://jdk8.java.net/download.html> (depending on your
   architecture)
 - dpkg-buildpackage -uc -us
