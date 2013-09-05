@@ -1,3 +1,10 @@
+oracle-java8 (8.0~b104-1) unstable; urgency=low
+
+  * Fix javaws location in mime file
+  * Build b104
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 05 Sep 2013 13:06:20 +0200
+
 oracle-java8 (8.0~b96-1) unstable; urgency=low
 
   * Build b96
