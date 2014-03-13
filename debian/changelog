@@ -1,3 +1,9 @@
+oracle-java8 (8.0~b132-1) unstable; urgency=low
+
+  * Build b132
+
+ -- Nameless <unfortunate42@gmail.com> Thu, 13 Mar 2014 10:47:10 +0100
+
 oracle-java8 (8.0~b104-1) unstable; urgency=low
 
   * Fix javaws location in mime file
