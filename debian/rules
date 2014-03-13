@@ -37,7 +37,7 @@ unpackdir	:= jdk$(jdkversion)
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(word 3, $(dirpartsv))
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)-jdk
-bin_pattern	:= jdk-$(version)-ea-bin-$(word 3, $(dirpartsv))-linux-%-22_aug_2013.tar.gz
+bin_pattern	:= jdk-$(version)-fcs-bin-$(word 3, $(dirpartsv))-linux-%-04_mar_2014.tar.gz
 priority	:= 43
 
 basedir		:= $(TOP)/$(jdirname)
@@ -409,9 +409,9 @@ binary-$(p_jbin):	build
 	rm -f $(d_jbin).substvars
 	dh_shlibdeps \
 		-l$(basedir)/jre/lib/$(archdir)/server \
-		-Xlibnpjp2.so \
-		-Xfxavcodecplugin-52.so -Xfxavcodecplugin-53.so -Xfxplugins.so -Xlibglass.so -Xlibgstplugins-lite.so -Xlibgstreamer-lite.so \
-		-Xlibjavafx-font.so -Xlibjavafx-iio.so -Xlibjfxmedia.so -Xlibjfxwebkit.so -Xlibprism-es2.so \
+		-Xlibnpjp2.so -Xlibavplugin.so -Xlibdecora_sse.so \
+		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
+		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
 
 	sed -i -e 's/libc6[^,]*, *//g' -e 's/libc6[^,]*$$//g' -e 's/ *([^,]*) *//g' \
@@ -423,11 +423,12 @@ binary-$(p_jbin):	build
 	dh_shlibdeps \
 		-l$(basedir)/jre/lib/$(archdir)/server \
 		-Xjavaws -Xpolicytool \
-		-Xlibjavaplugin -Xlibawt -Xlibjawt -Xlibmawt -Xlibdcpr \
-		-Xlibfontmanager -Xlibjsoundalsa  -X_g.so \
+		-Xlibjavaplugin -Xlibawt -Xlibjawt -Xlibdcpr \
+		-Xlibfontmanager -Xlibjsoundalsa \
 		-Xlibsplashscreen -Xlibmlib -Xlibdeploy \
-		-Xfxavcodecplugin-52.so -Xfxavcodecplugin-53.so -Xfxplugins.so -Xlibglass.so -Xlibgstplugins-lite.so -Xlibgstreamer-lite.so \
-		-Xlibjavafx-font.so -Xlibjavafx-iio.so -Xlibjfxmedia.so -Xlibjfxwebkit.so -Xlibprism-es2.so \
+		-Xlibavplugin.so -Xlibdecora_sse.so \
+		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
+		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
 	sed -i -e 's/ *([^,]*) *//g' $(d_jbin).substvars
 	cat $(d_jbin).substvars.tmp >> $(d_jbin).substvars
