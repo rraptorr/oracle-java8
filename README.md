@@ -1,6 +1,3 @@
-Java 8 is still a work in progress and so is this package. Things can
-change anytime without any compatibility concerns.
-
 Introduction
 ------------
 
