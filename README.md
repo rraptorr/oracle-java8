@@ -11,6 +11,7 @@ Supported Debian versions
 
 So far packages were tested on following Debian versions:
 
+- jessie i386/amd64
 - wheezy i386/amd64
 
 Packages have lower priority that default Debian OpenJDK or my Java 7
@@ -29,12 +30,7 @@ To create packages on your own:
 - apt-get install dpkg-dev
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
-- download jdk-8-linux-i586.tar.gz or jdk-8-linux-x64.tar.gz from
-  <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
-  (depending on your architecture)
-- download jce_policy-8.zip from the same page under "Java
-  Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy
-  Files for JDK/JRE 8"
+- sh ./prepare.sh
 - dpkg-buildpackage -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat

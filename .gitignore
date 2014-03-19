@@ -1,11 +1,3 @@
-jdk-*-linux-*.tar.gz
-jce_policy-8.zip
-UnlimitedJCEPolicyJDK8
-i586-jdk
-x64-jdk
-tmp-i586
-tmp-x64
-
 debian/JAVA_HOME
 debian/README.alternatives
 debian/oracle-java8-jre.README.Debian
@@ -36,3 +28,7 @@ debian/*.links
 debian/*.desktop
 debian/*.doc-base
 debian/*.tmp
+
+UnlimitedJCEPolicyJDK8
+x64
+i586

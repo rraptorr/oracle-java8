@@ -34,11 +34,9 @@ version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
 jdkbuild	:= 132
-unpackdir	:= jdk$(jdkversion)
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion)
 jdiralias	:= java-$(version)-$(VENDOR)
-srcdir		:= $(arch)-jdk
-bin_pattern	:= jdk-$(version)-linux-%.tar.gz
+srcdir		:= $(arch)
 priority	:= 43
 
 basedir		:= $(TOP)/$(jdirname)
@@ -85,11 +83,9 @@ info:
 	@echo 'basename    = $(basename)'
 	@echo 'version     = $(version)'
 	@echo 'releng_ver  = $(releng_ver)'
-	@echo 'unpackdir   = $(unpackdir)'
 	@echo 'srcdir      = $(srcdir)'
 	@echo 'arch        = $(arch)'
 	@echo 'archdir     = $(archdir)'
-	@echo 'bin_pattern = $(bin_pattern)'
 	@echo $(jre_tools)
 
 d	= debian/tmp
@@ -164,7 +160,7 @@ control-stamp: debian/control packaging-files
 build: build-arch build-indep
 build-arch: build-stamp
 build-indep: build-stamp
-build-stamp: info unpack-stamp control-stamp
+build-stamp: info control-stamp
 	touch build-stamp
 
 debian/control: debian/control.in debian/rules
@@ -218,45 +214,11 @@ diff_ignore = -I '^\* Monday' -I '^\* Tuesday' -I '^\* Wednesday' \
         -I '^ *// java GenerateCharacter' \
         -I '^// Generated from input file'
 
-unpack-stamp: unpack-$(arch)-stamp unpack-jce-stamp
-
-unpack-$(arch)-stamp: unpack-%-stamp: $(bin_pattern)
-	rm -rf $(unpackdir)
-	tar xf $<
-	mv $(unpackdir) $*-jdk
-	@echo $*
-
-	diff -u $*-jdk/COPYRIGHT $*-jdk/jre/COPYRIGHT
-	diff -u $*-jdk/LICENSE $*-jdk/jre/LICENSE
-	diff -u $*-jdk/THIRDPARTYLICENSEREADME.txt \
-	    $*-jdk/jre/THIRDPARTYLICENSEREADME.txt
-	diff -u $*-jdk/THIRDPARTYLICENSEREADME-JAVAFX.txt \
-	    $*-jdk/jre/THIRDPARTYLICENSEREADME-JAVAFX.txt
-
-	set -e; \
-	for i in $$(find $*-jdk -name '*.pack'); do \
-	  $*-jdk/bin/unpack200 $$i \
-		$$(dirname $$i)/$$(basename $$i .pack).jar; \
-	  rm -f $$i; \
-	done
-
-	: # fix permissions
-	-find $*-jdk -name '*.properties' -o -name '*.properties.ja' -o -name '*.xml' -o -name '*.bat' \
-	  -o -name '*.jar' -o -name '*.src' -o -name '*.bfc' -o -name '*.txt' -o -name '*.cfg' \
-	  -o -name 'classlist' -o -name 'currency.data' -o -name 'meta-index' -o -name '*.dat' | xargs chmod 644
-
-	touch $@
-
-unpack-jce-stamp: jce_policy-$(version).zip
-	rm -rf UnlimitedJCEPolicyJDK8
-	unzip -q jce_policy-$(version).zip
-	touch $@
-
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f *-stamp
-	rm -rf x64-jdk i586-jdk UnlimitedJCEPolicyJDK8 tmp-* $(unpackdir)
+	rm -rf tmp-*
 	rm -f debian/*.debhelper debian/control.old
 	rm -f debian/$(p_jbin).substvars.tmp
 
@@ -533,7 +495,7 @@ binary-$(p_fonts):	build
 	cd $(srcdir) && \
 	for f in jre/lib/*fonts/*.ttf; do \
 	  echo $(basedir)/$$f usr/share/fonts/truetype/lucida/$$(basename $$f); \
-	done >> $(CURDIR)/$(d_fonts).links
+	done >> "$(CURDIR)/$(d_fonts).links"
 
 	ln -s $(p_jre) $(d_fonts)/usr/share/doc/$(p_fonts)
 

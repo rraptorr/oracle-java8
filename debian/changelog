@@ -1,6 +1,7 @@
 oracle-java8 (8.0-1) UNRELEASED; urgency=low
 
   * New Java release
+  * Switch source package format to quilt
 
  -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 18 Mar 2014 23:47:35 +0000
 

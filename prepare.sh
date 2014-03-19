@@ -1,0 +1,30 @@
+#!/bin/sh
+
+export LC_ALL=C
+export LANG=C
+
+dir=`dirname "$0"`
+
+version=`dpkg-parsechangelog -l"$dir"/debian/changelog | sed -ne '/Version:/ s,Version: \(.*\),\1,p' | tr '.-' ' '`
+major=`echo $version | cut -d" " -f 1`
+minor=`echo $version | cut -d" " -f 2`
+debian=`echo $version | cut -d" " -f 3`
+
+make -f "$dir"/debian/rules -C "$dir" get-orig-source
+
+rm -rf "$dir"/UnlimitedJCEPolicyJDK8
+unzip -q "$dir"/jce_policy-8.zip -d "$dir"
+tar -czf "$dir"/../oracle-java${major}_${major}.${minor}.orig-UnlimitedJCEPolicyJDK8.tar.gz -C "$dir" UnlimitedJCEPolicyJDK8
+rm -f "$dir"/jce_policy-8.zip
+
+rm -rf "$dir"/i586 "$dir"/jdk1.${major}.0
+tar xf "$dir"/jdk-${major}-linux-i586.tar.gz -C "$dir"
+mv "$dir"/jdk1.${major}.0 "$dir"/i586
+mv "$dir"/jdk-${major}-linux-i586.tar.gz "$dir"/../oracle-java${major}_${major}.${minor}.orig-i586.tar.gz
+
+rm -rf "$dir"/x64 "$dir"/jdk1.${major}.0
+tar xf "$dir"/jdk-${major}-linux-x64.tar.gz -C "$dir"
+mv "$dir"/jdk1.${major}.0 "$dir"/x64
+mv "$dir"/jdk-${major}-linux-x64.tar.gz "$dir"/../oracle-java${major}_${major}.${minor}.orig-x64.tar.gz
+
+git --git-dir="$dir"/.git archive --format=tar --prefix=oracle_java${major}-${major}.${minor}/ HEAD README.md prepare.sh | gzip > "$dir"/../oracle-java${major}_${major}.${minor}.orig.tar.gz
