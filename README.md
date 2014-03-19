@@ -11,12 +11,11 @@ Supported Debian versions
 
 So far packages were tested on following Debian versions:
 
-- jessie i386/amd64
 - wheezy i386/amd64
 
-Packages are compatible with "official" Debian ones of Java 6, but
-have a lower priority (use update-java-alternatives if you have Java 6
-already installed).
+Packages have lower priority that default Debian OpenJDK or my Java 7
+packages, use update-java-alternatives if you want to make Java 8
+default.
 
 I do not have resources to test packages on Ubuntu. However, if one
 finds any problem on Ubuntu, feel free to report an issue and I will
@@ -30,10 +29,12 @@ To create packages on your own:
 - apt-get install dpkg-dev
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
-- Download jdk-8-fcs-bin-b132-linux-i586-04_mar_2014.tar.gz or
-  jdk-8-fcs-bin-b132-linux-x64-04_mar_2014.tar.gz from
-  <https://jdk8.java.net/download.html> (depending on your
-  architecture)
+- download jdk-8-linux-i586.tar.gz or jdk-8-linux-x64.tar.gz from
+  <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
+  (depending on your architecture)
+- download jce_policy-8.zip from the same page under "Java
+  Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy
+  Files for JDK/JRE 8"
 - dpkg-buildpackage -uc -us
 - install any missing packages that dpkg-buildpackage complains about
   and repeat

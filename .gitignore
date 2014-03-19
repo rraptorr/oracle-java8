@@ -1,4 +1,6 @@
 jdk-*-linux-*.tar.gz
+jce_policy-8.zip
+UnlimitedJCEPolicyJDK8
 i586-jdk
 x64-jdk
 tmp-i586

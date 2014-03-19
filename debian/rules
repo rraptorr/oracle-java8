@@ -29,15 +29,16 @@ javaname	:= $(shell echo $(word 2, $(dirparts)) | sed 's/[0-9.]*$$//')
 RELEASE		:= $(shell echo $(word 2, $(dirparts)) | sed 's/^[[:alpha:]]*//')
 PRODUCT		:= $(javaname)$(RELEASE)
 basename	:= $(VENDOR)-$(PRODUCT)
-dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\),\1,p' | tr '~.-' ' ')
+dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\),\1,p' | tr '.-' ' ')
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
+jdkbuild	:= 132
 unpackdir	:= jdk$(jdkversion)
-jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(word 3, $(dirpartsv))
+jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)-jdk
-bin_pattern	:= jdk-$(version)-fcs-bin-$(word 3, $(dirpartsv))-linux-%-04_mar_2014.tar.gz
+bin_pattern	:= jdk-$(version)-linux-%.tar.gz
 priority	:= 43
 
 basedir		:= $(TOP)/$(jdirname)
@@ -65,6 +66,14 @@ cjk_fonts += ttf-kochi-mincho | ttf-sazanami-mincho,
 cjk_fonts += ttf-arphic-uming,
 
 lintian_overrides	:= usr/share/lintian/overrides
+
+get-orig-source:
+	@for arch in x64 i586; do \
+	  curl -fLC - --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
+	    http://download.oracle.com/otn-pub/java/jdk/$(version)-b$(jdkbuild)/jdk-$(version)-linux-$$arch.tar.gz; \
+	done
+	@curl -fLC - --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
+	    http://download.oracle.com/otn-pub/java/jce/$(version)/jce_policy-8.zip
 
 info:
 	@echo Build information
@@ -209,7 +218,7 @@ diff_ignore = -I '^\* Monday' -I '^\* Tuesday' -I '^\* Wednesday' \
         -I '^ *// java GenerateCharacter' \
         -I '^// Generated from input file'
 
-unpack-stamp: unpack-$(arch)-stamp
+unpack-stamp: unpack-$(arch)-stamp unpack-jce-stamp
 
 unpack-$(arch)-stamp: unpack-%-stamp: $(bin_pattern)
 	rm -rf $(unpackdir)
@@ -238,12 +247,16 @@ unpack-$(arch)-stamp: unpack-%-stamp: $(bin_pattern)
 
 	touch $@
 
+unpack-jce-stamp: jce_policy-$(version).zip
+	rm -rf UnlimitedJCEPolicyJDK8
+	unzip -q jce_policy-$(version).zip
+	touch $@
 
 clean:
 	dh_testdir
 	dh_testroot
 	rm -f *-stamp
-	rm -rf x64-jdk i586-jdk tmp-* $(unpackdir)
+	rm -rf x64-jdk i586-jdk UnlimitedJCEPolicyJDK8 tmp-* $(unpackdir)
 	rm -f debian/*.debhelper debian/control.old
 	rm -f debian/$(p_jbin).substvars.tmp
 
@@ -477,6 +490,9 @@ binary-$(p_jre):	build
 	tar -c -C $(srcdir) -f - $(common_jre_things) \
 	  | tar -x -C $(d_jre)/$(basedir) -f -
 
+	: # JCE Unlimited Strength Jurisdiction Policy
+	cp -a UnlimitedJCEPolicyJDK8/*.jar $(d_jre)/$(basedir)/jre/lib/security/
+
 	: # add lintian overrides
 	cp -p debian/$(p_jre).overrides \
 		$(d_jre)/$(lintian_overrides)/$(p_jre)
@@ -576,6 +592,7 @@ binary-$(p_jdk):	build
 	dh_shlibdeps \
 		-L$(p_jbin) \
 		-l$(basedir)/jre/lib/$(archdir)/server \
+		-Xlibjawt.so -Xlibcairo-swt.so \
 		-- --warnings=0
 
 	sed -i -e 's/ *([^,]*) *//g' $(d_jdk).substvars
