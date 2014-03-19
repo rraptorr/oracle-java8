@@ -27,7 +27,7 @@ Usage
 
 To create packages on your own:
 
-- apt-get install dpkg-dev
+- apt-get install dpkg-dev curl
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
 - sh ./prepare.sh
