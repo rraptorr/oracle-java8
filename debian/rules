@@ -33,8 +33,8 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 132
-jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion)
+jdkbuild	:= 13
+jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
 priority	:= 43
@@ -68,7 +68,7 @@ lintian_overrides	:= usr/share/lintian/overrides
 get-orig-source:
 	@for arch in x64 i586; do \
 	  curl -fLC - --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
-	    http://download.oracle.com/otn-pub/java/jdk/$(version)-b$(jdkbuild)/jdk-$(version)-linux-$$arch.tar.gz; \
+	    http://download.oracle.com/otn-pub/java/jdk/$(version)u$(releng_ver)-b$(jdkbuild)/jdk-$(version)u$(releng_ver)-linux-$$arch.tar.gz; \
 	done
 	@curl -fLC - --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jce/$(version)/jce_policy-8.zip

@@ -1,3 +1,48 @@
+oracle-java8 (8.5-1) unstable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2014-0429): unspecified vulnerability fixed in 8u5 (2D)
+     - (CVE-2014-0457): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0456): unspecified vulnerability fixed in 8u5 (Hotspot)
+     - (CVE-2014-2421): unspecified vulnerability fixed in 8u5 (2D)
+     - (CVE-2014-2410): unspecified vulnerability fixed in 8u5 (JavaFX)
+     - (CVE-2014-2397): unspecified vulnerability fixed in 8u5 (Hotspot)
+     - (CVE-2014-2397): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0455): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0461): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0448): unspecified vulnerability fixed in 8u5 (Deployment)
+     - (CVE-2014-2428): unspecified vulnerability fixed in 8u5 (Deployment)
+     - (CVE-2014-2412): unspecified vulnerability fixed in 8u5 (AWT)
+     - (CVE-2014-0451): unspecified vulnerability fixed in 8u5 (AWT)
+     - (CVE-2014-0458): unspecified vulnerability fixed in 8u5 (JAX-WS)
+     - (CVE-2014-2423): unspecified vulnerability fixed in 8u5 (JAX-WS)
+     - (CVE-2014-0452): unspecified vulnerability fixed in 8u5 (JAX-WS)
+     - (CVE-2014-2414): unspecified vulnerability fixed in 8u5 (JAXB)
+     - (CVE-2014-2402): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0446): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0454): unspecified vulnerability fixed in 8u5 (Security)
+     - (CVE-2014-2427): unspecified vulnerability fixed in 8u5 (Sound)
+     - (CVE-2014-2422): unspecified vulnerability fixed in 8u5 (JavaFX)
+     - (CVE-2014-2409): unspecified vulnerability fixed in 8u5 (Deployment)
+     - (CVE-2014-0460): unspecified vulnerability fixed in 8u5 (JNDI)
+     - (CVE-2013-6954): libpng: unhandled zero-length PLTE chunk or NULL
+                        palette (AWT)
+     - (CVE-2013-6629): libjpeg: information leak (read of uninitialized
+                        memory) (AWT)
+     - (CVE-2014-0449): unspecified vulnerability fixed in 8u5 (Deployment)
+     - (CVE-2014-2403): unspecified vulnerability fixed in 8u5 (JAXP)
+     - (CVE-2014-2401): unspecified vulnerability fixed in 8u5 (2D)
+     - (CVE-2014-0463): unspecified vulnerability fixed in 8u5 (Scripting)
+     - (CVE-2014-0464): unspecified vulnerability fixed in 8u5 (Scripting)
+     - (CVE-2014-0459): unspecified vulnerability fixed in 8u5 (2D)
+     - (CVE-2014-2413): unspecified vulnerability fixed in 8u5 (Libraries)
+     - (CVE-2014-0453): unspecified vulnerability fixed in 8u5 (Security)
+     - (CVE-2014-2398): unspecified vulnerability fixed in 8u5 (Javadoc)
+     - (CVE-2014-1876): insecure temporary file use in unpack200 (Libraries)
+     - (CVE-2014-2420): unspecified vulnerability fixed in 8u5 (Deployment)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 15 Apr 2014 23:23:08 +0200
+
 oracle-java8 (8.0-1) unstable; urgency=low
 
   * New Java release
