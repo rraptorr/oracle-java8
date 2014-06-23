@@ -1,3 +1,9 @@
+oracle-java8 (8.5-2) unstable; urgency=low
+
+  * Update dependencies and README to fix issues with missing packages or tools
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 23 Jun 2014 14:34:31 +0200
+
 oracle-java8 (8.5-1) unstable; urgency=high
 
   * SECURITY UPDATE:

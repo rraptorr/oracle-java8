@@ -8,10 +8,9 @@ export DH_OPTIONS=
 
 export SHELL=/bin/bash
 
-distribution	:= $(shell lsb_release -is)
-distrelease	:= $(shell lsb_release -cs)
+distribution	:= $(shell dpkg-vendor --query Vendor)
 
-DEB_HOST_ARCH	?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_ARCH	?= $(shell dpkg-architecture -qDEB_HOST_ARCH 2>/dev/null)
 
 arch_map	:= amd64=x64 i386=i586
 archdir_map	:= amd64=amd64 i386=i386
@@ -55,8 +54,6 @@ java_launcher = /$(basedir)/bin/java
 ifeq ($(distribution),Ubuntu)
   java_launcher = cautious-launcher %f /$(basedir)/bin/java
 endif
-
-with_wgy_zenhai = $(if $(filter $(distrelease),hardy),yes)
 
 cjk_fonts = ttf-baekmuk | ttf-unfonts-core,
 cjk_fonts += ttf-kochi-gothic | ttf-sazanami-gothic,
