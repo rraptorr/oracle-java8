@@ -1,3 +1,9 @@
+oracle-java8 (8.20-1) stable; urgency=low
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 20 Aug 2014 08:31:28 +0200
+
 oracle-java8 (8.11-1) stable; urgency=high
 
   * SECURITY UPDATE:
