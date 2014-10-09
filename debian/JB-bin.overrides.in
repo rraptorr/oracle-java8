@@ -17,3 +17,4 @@
 @basename@-bin: embedded-library @basedir@/jre/lib/@arch@/libzip.so: zlib
 @basename@-bin: embedded-library @basedir@/jre/lib/@arch@/libjavafx_iio.so: libjpeg
 @basename@-bin: embedded-library @basedir@/jre/lib/@arch@/libjfxwebkit.so: sqlite
+@basename@-bin: embedded-library @basedir@/jre/lib/@arch@/liblcms.so: lcms2

@@ -1,3 +1,10 @@
+oracle-java8 (8.20-2) UNRELEASED; urgency=low
+
+  * Fix libodbc symlinks
+  * Update standards version to 3.9.6
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 09 Oct 2014 19:25:03 +0000
+
 oracle-java8 (8.20-1) stable; urgency=low
 
   * New Java release
