@@ -1,3 +1,9 @@
+oracle-java8 (8.25-2) UNRELEASED; urgency=low
+
+  * Disable resume while downloading JCE policy file
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 15 Dec 2014 20:59:07 +0000
+
 oracle-java8 (8.25-1) stable; urgency=high
 
   * Fix libodbc symlinks
