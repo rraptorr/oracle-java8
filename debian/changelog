@@ -1,6 +1,7 @@
 oracle-java8 (8.31-1) stable; urgency=high
 
   * Disable resume while downloading JCE policy file
+  * Increase Java 8 priority to make it higher than Java7 which is nearing EOL
   * SECURITY UPDATE:
      - (CVE-2014-6601): class verifier insufficient invokespecial calls
                         verification (Hotspot)

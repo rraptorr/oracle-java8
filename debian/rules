@@ -37,7 +37,7 @@ jdkbuild	:= 13
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
-priority	:= 43
+priority	:= 83
 
 basedir		:= $(TOP)/$(jdirname)
 security	:= etc/$(jdiralias)/security
