@@ -1,3 +1,9 @@
+oracle-java8 (8.40-1) stable; urgency=low
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 05 Mar 2015 09:49:29 +0100
+
 oracle-java8 (8.31-1) stable; urgency=high
 
   * Disable resume while downloading JCE policy file

@@ -33,7 +33,7 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 13
+jdkbuild	:= 25
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
@@ -382,7 +382,7 @@ binary-$(p_jbin):	build
 	rm -f $(d_jbin).substvars
 	dh_shlibdeps \
 		-l$(basedir)/jre/lib/$(archdir)/server \
-		-Xlibnpjp2.so -Xlibavplugin.so -Xlibdecora_sse.so \
+		-Xlibnpjp2.so -Xlibavplugin-53.so -Xlibavplugin-54.so -Xlibdecora_sse.so \
 		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
 		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
@@ -399,7 +399,7 @@ binary-$(p_jbin):	build
 		-Xlibjavaplugin -Xlibawt -Xlibjawt -Xlibdcpr \
 		-Xlibfontmanager -Xlibjsoundalsa \
 		-Xlibsplashscreen -Xlibmlib -Xlibdeploy \
-		-Xlibavplugin.so -Xlibdecora_sse.so \
+		-Xlibavplugin-53.so -Xlibavplugin-54.so -Xlibdecora_sse.so \
 		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
 		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
