@@ -1,3 +1,23 @@
+oracle-java8 (8.45-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2015-0469): layout engine glyphStorage off-by-one (2D)
+     - (CVE-2015-0459): unspecified vulnerability fixed in 8u45 (2D)
+     - (CVE-2015-0491): unspecified vulnerability fixed in 8u45 (2D)
+     - (CVE-2015-0460): incorrect handling of phantom references (Hotspot)
+     - (CVE-2015-0492): unspecified vulnerability fixed in 8u45 (JavaFX)
+     - (CVE-2015-0458): unspecified vulnerability fixed in 8u45 (Deployment)
+     - (CVE-2015-0484): unspecified vulnerability fixed in 8u45 (JavaFX)
+     - (CVE-2015-0480): jar directory traversal issues (Tools)
+     - (CVE-2015-0486): unspecified vulnerability fixed in 8u45 (Deployment)
+     - (CVE-2015-0488): certificate options parsing uncaught exception (JSSE)
+     - (CVE-2015-0477): incorrect permissions check in resource loading
+                        (Beans)
+     - (CVE-2015-0470): incorrect handling of default methods (Hotspot)
+     - (CVE-2015-0478): RSA implementation hardening (JCE)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 14 Apr 2015 20:26:26 +0200
+
 oracle-java8 (8.40-1) stable; urgency=low
 
   * New Java release
