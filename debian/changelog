@@ -1,3 +1,46 @@
+oracle-java8 (8.51-1) stable; urgency=high
+
+  * Various 1024 bit root certificates removed (see Oracle release notes)
+  * Various new root certificates added (see Oracle release notes)
+  * RC4 cipher is disabled by default in JSSE
+  * SECURITY UPDATE:
+     - (CVE-2015-4760): ICU: missing boundary checks in layout engine (2D)
+     - (CVE-2015-2628): IIOPInputStream type confusion vulnerability (CORBA)
+     - (CVE-2015-4731): improper permission checks in
+                        MBeanServerInvocationHandler (JMX)
+     - (CVE-2015-2590): deserialization issue in
+                        ObjectInputStream.readSerialData() (Libraries)
+     - (CVE-2015-4732): insufficient context checks during object
+                        deserialization (Libraries)
+     - (CVE-2015-4733): RemoteObjectInvocationHandler allows calling finalize()
+                        (RMI)
+     - (CVE-2015-2638): unspecified vulnerability fixed in 8u51 (2D)
+     - (CVE-2015-4736): unspecified vulnerability fixed in 8u51 (Deployment)
+     - (CVE-2015-4748): incorrect OCSP nextUpdate checking (Libraries)
+     - (CVE-2015-2597): unspecified vulnerability fixed in 8u51 (Install)
+     - (CVE-2015-2664): unspecified vulnerability fixed in 8u51 (Deployment)
+     - (CVE-2015-2632): ICU: integer overflow in LETableReference verifyLength()
+                        (2D)
+     - (CVE-2015-2601): non-constant time comparisons in crypto code (JCE)
+     - (CVE-2015-2613): missing EC parameter validation in ECDH_Derive() (JCE)
+     - (CVE-2015-2621): incorrect code permission checks in RMIConnectionImpl
+                        (JMX)
+     - (CVE-2015-2659): GCM cipher issue causing JVM crash (Security)
+     - (CVE-2015-2619): unspecified vulnerability fixed in 8u51 (2D)
+     - (CVE-2015-2637): unspecified vulnerability fixed in 8u51 (2D)
+     - (CVE-2015-4749): DnsClient fails to release request information after
+                        error (JNDI)
+     - (CVE-2015-4729): unspecified vulnerability fixed in 8u51 (Deployment)
+     - (CVE-2015-4000): LOGJAM: TLS connections which support export grade DHE
+                        key-exchange are vulnerable to MITM attacks (JSSE)
+     - (CVE-2015-2808): SSL/TLS: "Invariance Weakness" vulnerability in RC4
+                        stream cipher (JSSE)
+     - (CVE-2015-2627): unspecified vulnerability fixed in 8u51 (Install)
+     - (CVE-2015-2625): name for reverse DNS lookup used in certificate identity
+                        check (JSSE)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 15 Jul 2015 09:57:33 +0200
+
 oracle-java8 (8.45-1) stable; urgency=high
 
   * SECURITY UPDATE:
