@@ -1,3 +1,9 @@
+oracle-java8 (8.60-1) stable; urgency=medium
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 19 Aug 2015 11:01:57 +0200
+
 oracle-java8 (8.51-1) stable; urgency=high
 
   * Various 1024 bit root certificates removed (see Oracle release notes)
