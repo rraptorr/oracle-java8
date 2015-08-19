@@ -8,6 +8,7 @@ Supported Debian versions
 
 So far packages were tested on following Debian versions:
 
+- stretch i386/amd64
 - jessie i386/amd64
 - wheezy i386/amd64
 
