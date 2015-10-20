@@ -1,3 +1,33 @@
+oracle-java8 (8.65-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2015-4835): unspecified vulnerability fixed in 8u65 (CORBA)
+     - (CVE-2015-4881): unspecified vulnerability fixed in 8u65 (CORBA)
+     - (CVE-2015-4843): unspecified vulnerability fixed in 8u65 (Libraries)
+     - (CVE-2015-4883): unspecified vulnerability fixed in 8u65 (RMI)
+     - (CVE-2015-4860): unspecified vulnerability fixed in 8u65 (RMI)
+     - (CVE-2015-4805): unspecified vulnerability fixed in 8u65 (Serialization)
+     - (CVE-2015-4844): unspecified vulnerability fixed in 8u65 (2D)
+     - (CVE-2015-4901): unspecified vulnerability fixed in 8u65 (JavaFX)
+     - (CVE-2015-4868): unspecified vulnerability fixed in 8u65 (Libraries)
+     - (CVE-2015-4810): unspecified vulnerability fixed in 8u65 (Deployment)
+     - (CVE-2015-4806): unspecified vulnerability fixed in 8u65 (Libraries)
+     - (CVE-2015-4902): unspecified vulnerability fixed in 8u65 (Deployment)
+     - (CVE-2015-4840): unspecified vulnerability fixed in 8u65 (2D)
+     - (CVE-2015-4882): unspecified vulnerability fixed in 8u65 (CORBA)
+     - (CVE-2015-4842): unspecified vulnerability fixed in 8u65 (JAXP)
+     - (CVE-2015-4734): unspecified vulnerability fixed in 8u65 (JGSS)
+     - (CVE-2015-4903): unspecified vulnerability fixed in 8u65 (RMI)
+     - (CVE-2015-4803): unspecified vulnerability fixed in 8u65 (JAXP)
+     - (CVE-2015-4893): unspecified vulnerability fixed in 8u65 (JAXP)
+     - (CVE-2015-4911): unspecified vulnerability fixed in 8u65 (JAXP)
+     - (CVE-2015-4872): unspecified vulnerability fixed in 8u65 (Security)
+     - (CVE-2015-4906): unspecified vulnerability fixed in 8u65 (JavaFX)
+     - (CVE-2015-4916): unspecified vulnerability fixed in 8u65 (JavaFX)
+     - (CVE-2015-4908): unspecified vulnerability fixed in 8u65 (JavaFX)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 21 Oct 2015 01:20:33 +0200
+
 oracle-java8 (8.60-1) stable; urgency=medium
 
   * New Java release
