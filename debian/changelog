@@ -1,3 +1,20 @@
+oracle-java8 (8.71-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+     - (CVE-2016-0494): ICU: integer signedness issue in
+                        IndicRearrangementProcessor (2D)
+     - (CVE-2015-8126): libpng: Buffer overflow vulnerabilities in
+                        png_get_PLTE/png_set_PLTE functions (AWT)
+     - (CVE-2016-0483): incorrect boundary check in JPEG decoder (AWT)
+     - (CVE-2016-0475): PBE incorrect key lengths (Libraries)
+     - (CVE-2016-0402): URL deserialization inconsistencies (Networking)
+     - (CVE-2016-0466): insufficient enforcement of totalEntitySizeLimit (JAXP)
+     - (CVE-2016-0448): logging of RMI connection secrets (JMX)
+     - (CVE-2015-7575): TLS 1.2 Transcipt Collision attacks against MD5 in key
+                        exchange protocol (SLOTH) (Security)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 20 Jan 2016 10:12:58 +0100
+
 oracle-java8 (8.66-1) stable; urgency=medium
 
   * New Java release
