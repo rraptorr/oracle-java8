@@ -1,3 +1,10 @@
+oracle-java8 (8.73-1) stable; urgency=low
+
+  * SECURITY UPDATE:
+    - (CVE-2016-0603): Executable Windows installers are vulnerable (Install)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Mon, 08 Feb 2016 14:12:54 +0100
+
 oracle-java8 (8.72-1) stable; urgency=medium
 
   * New Java release
