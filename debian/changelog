@@ -1,3 +1,10 @@
+oracle-java8 (8.77-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2016-0636): unspecified vulnerability fixed in 8u77 (Hotspot)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 24 Mar 2016 11:16:12 +0100
+
 oracle-java8 (8.74-1) stable; urgency=low
 
   * SECURITY UPDATE:
