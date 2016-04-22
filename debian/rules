@@ -33,7 +33,7 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 03
+jdkbuild	:= 14
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
@@ -70,8 +70,8 @@ get-orig-source:
 	done
 	@curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jce/$(version)/jce_policy-8.zip
-	echo "a47dc0962a57b27a0cc00b9f11a53dc3add40c98633ba49a2419b845e4dedf43  jdk-8u77-linux-x64.tar.gz" | sha256sum -c
-	echo "f2889b778538fe3d20b2d37d0de3c3204de86126aadb75c1bb38d11255b41e92  jdk-8u77-linux-i586.tar.gz" | sha256sum -c
+	echo "6f9b516addfc22907787896517e400a62f35e0de4a7b4d864b26b61dbe1b7552  jdk-8u91-linux-x64.tar.gz" | sha256sum -c
+	echo "5ecd05b5e566cbe688fc1e3159f04004ccad14d4faa3f50d15ffba1d50b4cd52  jdk-8u91-linux-i586.tar.gz" | sha256sum -c
 	echo "f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59  jce_policy-8.zip" | sha256sum -c
 
 info:

@@ -1,3 +1,21 @@
+oracle-java8 (8.91-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2016-3443): unspecified vulnerability fixed in 8u91 (2D)
+    - (CVE-2016-0687): insufficient byte type checks (Hotspot)
+    - (CVE-2016-0686): insufficient thread consistency checks in
+                       ObjectInputStream (Serialization)
+    - (CVE-2016-3427): unrestricted deserialization of authentication
+                       credentials (JMX)
+    - (CVE-2016-3449): unspecified vulnerability fixed in 8u91 (Deployment)
+    - (CVE-2016-0695): insufficient DSA key parameters checks (Security)
+    - (CVE-2016-3425): incorrect handling of surrogate pairs in XML attribute
+                       values (JAXP)
+    - (CVE-2016-3422): unspecified vulnerability fixed in 8u91 (2D)
+    - (CVE-2016-3426): non-constant time GCM authentication tag comparison (JCE)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Fri, 22 Apr 2016 14:12:42 +0200
+
 oracle-java8 (8.77-1) stable; urgency=high
 
   * SECURITY UPDATE:
