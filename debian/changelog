@@ -1,3 +1,9 @@
+oracle-java8 (8.102-1) stable; urgency=low
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 19 Jul 2016 22:29:05 +0200
+
 oracle-java8 (8.101-1) stable; urgency=high
 
   * New CA certificates added to root CAs, including
