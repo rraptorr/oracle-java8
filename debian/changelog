@@ -1,3 +1,26 @@
+oracle-java8 (8.101-1) stable; urgency=high
+
+  * New CA certificates added to root CAs, including
+    "IdenTrust DST Root CA X3" used by Let's Encrypt project.
+  * Disable resume when downloading archives as Oracle servers do not support
+    it anyway (closes #12).
+  * SECURITY UPDATE:
+    - (CVE-2016-3587): unspecified vulnerability fixed in 8u101 (Hotspot)
+    - (CVE-2016-3606): unspecified vulnerability fixed in 8u101 (Hotspot)
+    - (CVE-2016-3598): unspecified vulnerability fixed in 8u101 (Libraries)
+    - (CVE-2016-3610): unspecified vulnerability fixed in 8u101 (Libraries)
+    - (CVE-2016-3552): unspecified vulnerability fixed in 8u101 (Install)
+    - (CVE-2016-3511): unspecified vulnerability fixed in 8u101 (Deployment)
+    - (CVE-2016-3503): unspecified vulnerability fixed in 8u101 (Install)
+    - (CVE-2016-3498): unspecified vulnerability fixed in 8u101 (JavaFX)
+    - (CVE-2016-3500): unspecified vulnerability fixed in 8u101 (JAXP)
+    - (CVE-2016-3508): unspecified vulnerability fixed in 8u101 (JAXP)
+    - (CVE-2016-3458): unspecified vulnerability fixed in 8u101 (CORBA)
+    - (CVE-2016-3550): unspecified vulnerability fixed in 8u101 (Hotspot)
+    - (CVE-2016-3485): unspecified vulnerability fixed in 8u101 (Networking)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 19 Jul 2016 20:47:24 +0200
+
 oracle-java8 (8.92-1) stable; urgency=low
 
   * New Java release
