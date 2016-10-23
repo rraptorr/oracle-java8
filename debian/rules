@@ -70,8 +70,8 @@ get-orig-source:
 	done
 	@curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jce/$(version)/jce_policy-8.zip
-	echo "7cfbe0bc0391a4abe60b3e9eb2a541d2315b99b9cb3a24980e618a89229e04b7  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
-	echo "ed08112bad8e63c1c102ab52fccef930849b6cbadc5e9a816e12a99ddcbb5eaf  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
+	echo "187eda2235f812ddb35c352b5f9aa6c5b184d611c2c9d0393afb8031d8198974  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
+	echo "9a8e8fcf7b6fbe53d6312195be87ce00f3beaab9dfbaa020b96e305174f39e1f  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
 	echo "f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59  jce_policy-8.zip" | sha256sum -c
 
 info:

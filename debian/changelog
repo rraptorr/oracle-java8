@@ -1,3 +1,20 @@
+oracle-java8 (8.111-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2016-5556): unspecified vulnerability fixed in 8u111 (2D)
+    - (CVE-2016-5568): incorrect menu handling on Windows (AWT)
+    - (CVE-2016-5582): incomplete type checks of System.arraycopy arguments
+                       (Hotspot)
+    - (CVE-2016-5573): insufficient checks of JDWP packets (Hotspot)
+    - (CVE-2016-5597): exposure of server authentication credentials to proxy
+                       (Networking)
+    - (CVE-2016-5554): insufficient classloader consistency checks in
+                       ClassLoaderWithRepository (JMX)
+    - (CVE-2016-5542): missing algorithm restrictions for jar verification
+                       (Libraries)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sun, 23 Oct 2016 10:57:14 +0200
+
 oracle-java8 (8.102-1) stable; urgency=low
 
   * New Java release
