@@ -1,3 +1,35 @@
+oracle-java8 (8.121-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2017-3289): insecure class construction (Hotspot)
+    - (CVE-2017-3272): insufficient protected field access checks in atomic
+                       field updaters (Libraries)
+    - (CVE-2017-3241): untrusted input deserialization in RMI registry and DCG
+                       (RMI)
+    - (CVE-2017-3260): unspecified vulnerability fixed in 8u121 (AWT)
+    - (CVE-2017-3253): imageio PNGImageReader failed to honor ignoreMetadata
+                       for iTXt and zTXt chunks (2D)
+    - (CVE-2016-5546): incorrect ECDSA signature extraction from the DER input
+                       (Libraries)
+    - (CVE-2016-5549): ECDSA implementation timing attack (Libraries)
+    - (CVE-2016-5548): DSA implementation timing attack (Libraries)
+    - (CVE-2017-3252): LdapLoginModule incorrect userDN extraction (JAAS)
+    - (CVE-2017-3262): unspecified vulnerability fixed in 8u121
+                       (Java Mission Control)
+    - (CVE-2016-5547): missing ObjectIdentifier length check (Libraries)
+    - (CVE-2016-5552): incorrect URL parsing in URLStreamHandler (Networking)
+    - (CVE-2017-3231): URLClassLoader insufficient access control checks
+                       (Networking)
+    - (CVE-2017-3261): integer overflow in SocketOutputStream boundary check
+                       (Networking)
+    - (CVE-2017-3259): unspecified vulnerability fixed in 8u121 (Deployment)
+    - (CVE-2016-8328): unspecified vulnerability fixed in 8u121
+                       (Java Mission Control)
+    - (CVE-2016-2183): SSL/TLS: Birthday attack against 64-bit block ciphers
+                       (SWEET32) (Libraries)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jan 2017 20:56:07 +0100
+
 oracle-java8 (8.112-1) stable; urgency=medium
 
   * New Java release
