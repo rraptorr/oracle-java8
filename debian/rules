@@ -44,7 +44,7 @@ basedir		:= $(TOP)/$(jdirname)
 security	:= etc/$(jdiralias)/security
 
 browser_plugin_dirs = firefox iceape iceweasel mozilla midbrowser konqueror
-browsers = firefox | iceweasel | iceape-browser | epiphany-browser | galeon | konqueror | chromium-browser | midori | google-chrome
+browsers = firefox | firefox-esr | iceweasel | iceape-browser | epiphany-browser | galeon | konqueror | chromium-browser | midori | google-chrome
 
 ifeq ($(distribution),Ubuntu)
   browser_plugin_dirs = mozilla

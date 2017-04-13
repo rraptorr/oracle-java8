@@ -46,7 +46,7 @@ Package: oracle-java8-plugin
 Architecture: amd64 i386
 Section: non-free/web
 Priority: optional
-Depends: ${shlibs:Depends}, ${misc:Depends}, oracle-java8-bin (>= ${source:Version}), firefox | iceweasel | iceape-browser | epiphany-browser | galeon | konqueror | chromium-browser | midori | google-chrome
+Depends: ${shlibs:Depends}, ${misc:Depends}, oracle-java8-bin (>= ${source:Version}), firefox | firefox-esr | iceweasel | iceape-browser | epiphany-browser | galeon | konqueror | chromium-browser | midori | google-chrome
 Description: Java(TM) Plug-in, Java SE 8
  Java Plug-in enables applets written to the Java Platform 8 
  specification to be run in Mozilla and other web browsers. 
