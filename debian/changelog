@@ -1,3 +1,19 @@
+oracle-java8 (8.131-1) jessie; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2017-3512): unspecified vulnerability fixed in 8u131 (AWT)
+    - (CVE-2017-3514): unspecified vulnerability fixed in 8u131 (AWT)
+    - (CVE-2017-3511): untrusted extension directories search path in Launcher
+                       (JCE)
+    - (CVE-2017-3526): incomplete XML parse tree size enforcement (JAXP)
+    - (CVE-2017-3509): improper re-use of NTLM authenticated connections
+                       (Networking)
+    - (CVE-2017-3533): newline injection in the FTP client (Networking)
+    - (CVE-2017-3544): newline injection in the SMTP client (Networking)
+    - (CVE-2017-3539): MD5 allowed for jar verification (Security)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 19 Apr 2017 10:56:42 +0200
+
 oracle-java8 (8.121-1) stable; urgency=high
 
   * SECURITY UPDATE:
