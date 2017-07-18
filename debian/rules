@@ -122,7 +122,6 @@ jre_tools_alt	= $(filter-out kinit klist ktab, $(jre_tools)) $(corba_tools)
 
 all_jdk_tools	= $(notdir $(wildcard $(srcdir)/bin/*))
 jdk_tools	= $(filter-out $(all_jre_tools), $(all_jdk_tools))
-jdk_tools_alt	= $(filter-out jvisualvm, $(jdk_tools))
 
 jre_manpages_re:= $(shell echo $(jre_tools) $(corba_tools) | tr -s ' ' '|')
 
@@ -204,7 +203,7 @@ packaging-files:
 	      -e 's/@archdir@/$(archdir)/g' \
 	      -e 's/@priority@/$(priority)/g' \
 	      -e 's/@jre_tools@/$(jre_tools_alt)/g' \
-	      -e 's/@jdk_tools@/$(jdk_tools_alt)/g' \
+	      -e 's/@jdk_tools@/$(jdk_tools)/g' \
 	      -e 's,@browser_dirs@,$(browser_plugin_dirs),g' \
 	      -e 's,@java_launcher@,$(java_launcher),g' \
 	    $$f > $$f2; \
@@ -431,7 +430,7 @@ binary-$(p_jbin):	build
 	    echo "jre $$i /$(TOP)/$(jdiralias)/jre/bin/$$i"; \
 	  done; \
 	  echo "jre jexec /$(TOP)/$(jdiralias)/jre/lib/jexec"; \
-	  for i in $(jdk_tools_alt); do \
+	  for i in $(jdk_tools); do \
 	    echo "jdk $$i /$(TOP)/$(jdiralias)/bin/$$i"; \
 	  done; \
 	  for d in $(browser_plugin_dirs); do \
