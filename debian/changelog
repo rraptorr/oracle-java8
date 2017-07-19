@@ -1,3 +1,55 @@
+oracle-java8 (8.141-1) jessie; urgency=high
+
+  * New CA certificate added to root CAs "ISRG Root X1"
+    used by Let's Encrypt project.
+  * Any TLS server certificate chain containing a SHA-1 certificate (end-entity
+    or intermediate CA) and anchored by a root CA certificate included by default
+    in Oracle's JDK is now blocked by default.
+  * SECURITY UPDATE:
+    - (CVE-2017-10110): insufficient access control checks in ImageWatched (AWT)
+    - (CVE-2017-10089): insufficient access control checks in ServiceRegistry
+                        (ImageIO)
+    - (CVE-2017-10086): unspecified vulnerability fixed in 8u141 (JavaFX)
+    - (CVE-2017-10096): insufficient access control checks in XML transformations
+                        (JAXP)
+    - (CVE-2017-10101): unrestricted access to
+                        com.sun.org.apache.xml.internal.resolver (JAXP)
+    - (CVE-2017-10087): insufficient access control checks in ThreadPoolExecutor
+                        (Libraries)
+    - (CVE-2017-10090): insufficient access control checks in
+                        AsynchronousChannelGroupImpl (Libraries)
+    - (CVE-2017-10111): incorrect range checks in LambdaFormEditor (Libraries)
+    - (CVE-2017-10107): insufficient access control checks in ActivationID (RMI)
+    - (CVE-2017-10102): incorrect handling of references in DGC (RMI)
+    - (CVE-2017-10114): unspecified vulnerability fixed in 8u141 (JavaFX)
+    - (CVE-2017-10074): integer overflows in range check loop predicates
+                        (Hotspot)
+    - (CVE-2017-10116): LDAPCertStore following referrals to non-LDAP URLs
+                        (Security)
+    - (CVE-2017-10078): Nashorn incompletely blocking access to Java APIs
+                        (Scripting)
+    - (CVE-2017-10067): JAR verifier incorrect handling of missing digest
+                        (Security)
+    - (CVE-2017-10115): DSA implementation timing attack (JCE)
+    - (CVE-2017-10118): ECDSA implementation timing attack (JCE)
+    - (CVE-2017-10176): incorrect handling of certain EC points (Security)
+    - (CVE-2017-10125): unspecified vulnerability fixed in 8u141 (Deployment)
+    - (CVE-2017-10198): incorrect enforcement of certificate path restrictions
+                        (Security)
+    - (CVE-2017-10243): unspecified vulnerability fixed in 8u141 (JAX-WS)
+    - (CVE-2017-10135): PKCS#8 implementation timing attack (JCE)
+    - (CVE-2017-10053): reading of unprocessed image data in JPEGImageReader (2D)
+    - (CVE-2017-10108): unbounded memory allocation in BasicAttribute
+                        deserialization (Serialization)
+    - (CVE-2017-10109): unbounded memory allocation in CodeSource
+                        deserialization (Serialization)
+    - (CVE-2017-10105): unspecified vulnerability fixed in 8u141 (Deployment)
+    - (CVE-2017-10081): incorrect bracket processing in function signature
+                        handling (Hotspot)
+    - (CVE-2017-10193): incorrect key size constraint check (Security)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 19 Jul 2017 10:45:40 +0200
+
 oracle-java8 (8.131-1) jessie; urgency=high
 
   * SECURITY UPDATE:
