@@ -1,3 +1,9 @@
+oracle-java8 (8.144-1) stable; urgency=medium
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 01 Aug 2017 22:07:10 +0200
+
 oracle-java8 (8.141-1) jessie; urgency=high
 
   * New CA certificate added to root CAs "ISRG Root X1"
