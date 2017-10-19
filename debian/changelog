@@ -1,5 +1,10 @@
 oracle-java8 (8.151-1) stable; urgency=medium
 
+  * Oracle changed how JCE unlimited policy works. There is no longer need to
+    download anything. Both limited and unlimited policies are present.
+    One can select JCE policy in /etc/java-8-oracle/security/java.security
+    This package changes the default in that file to unlimited, but you might
+    need to add that if you modified java.security file previously.
   * SECURITY UPDATE:
     - (CVE-2017-10346): insufficient loader constraints checks for invokespecial
                         (Hotspot)
