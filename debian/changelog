@@ -1,3 +1,9 @@
+oracle-java8 (8.152-1) stable; urgency=medium
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 19 Oct 2017 14:29:41 +0200
+
 oracle-java8 (8.151-1) stable; urgency=medium
 
   * Oracle changed how JCE unlimited policy works. There is no longer need to
