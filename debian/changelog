@@ -1,3 +1,41 @@
+oracle-java8 (8.151-1) stable; urgency=medium
+
+  * SECURITY UPDATE:
+    - (CVE-2017-10346): insufficient loader constraints checks for invokespecial
+                        (Hotspot)
+    - (CVE-2017-10285): incorrect privilege use when handling unreferenced
+                        objects (RMI)
+    - (CVE-2017-10388): use of unprotected sname in Kerberos client (Libraries)
+    - (CVE-2017-10309): unspecified vulnerability fixed in 8u151 (Deployment)
+    - (CVE-2017-10274): CardImpl incorrect state handling (Smart Card IO)
+    - (CVE-2017-10356): weak protection of key stores against brute forcing
+                        (Security)
+    - (CVE-2017-10293): unspecified vulnerability fixed in 8u151 (Javadoc)
+    - (CVE-2017-10350): unbounded memory allocation in JAXWSExceptionBase
+                        deserialization (JAX-WS)
+    - (CVE-2017-10349): unbounded memory allocation in PredicatedNodeTest
+                        deserialization (JAXP)
+    - (CVE-2017-10348): multiple unbounded memory allocations in deserialization
+                        (Libraries)
+    - (CVE-2017-10357): unbounded memory allocation in ObjectInputStream
+                        deserialization (Serialization)
+    - (CVE-2016-9841): zlib: Out-of-bounds pointer arithmetic in inffast.c
+                       (Util (zlib))
+    - (CVE-2016-10165): lcms2: Out-of-bounds read in Type_MLU_Read()
+                        (2D (Little CMS 2))
+    - (CVE-2017-10355): no default network operations timeouts in FtpClient
+                        (Networking)
+    - (CVE-2017-10281): multiple unbounded memory allocations in deserialization
+                        (Serialization)
+    - (CVE-2017-10347): unbounded memory allocation in SimpleTimeZone
+                        deserialization (Serialization)
+    - (CVE-2017-10295): HTTP client insufficient check for newline in URLs
+                        (Networking)
+    - (CVE-2017-10345): unbounded resource use in JceKeyStore deserialization
+                        (Serialization)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Thu, 19 Oct 2017 12:49:32 +0200
+
 oracle-java8 (8.144-1) stable; urgency=medium
 
   * New Java release
