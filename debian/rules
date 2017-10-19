@@ -69,11 +69,8 @@ get-orig-source:
 	  curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jdk/$(version)u$(releng_ver)-b$(jdkbuild)/$(downloadhash)/jdk-$(version)u$(releng_ver)-linux-$$arch.tar.gz; \
 	done
-	@curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
-	    http://download.oracle.com/otn-pub/java/jce/$(version)/jce_policy-8.zip
 	echo "c78200ce409367b296ec39be4427f020e2c585470c4eed01021feada576f027f  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
 	echo "8062f34f69dd1f1991bff517df52da606c53f5fa0d6677ceb46df30e93b53a70  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
-	echo "f3020a3922efd6626c2fff45695d527f34a8020e938a49292561f18ad1320b59  jce_policy-8.zip" | sha256sum -c
 
 info:
 	@echo Build information
@@ -135,8 +132,7 @@ common_jre_things = \
 	jre/lib/ext/sunjce_provider.jar \
 	jre/lib/ext/sunpkcs11.jar \
 	jre/lib/ext/sunec.jar \
-	jre/lib/security/local_policy.jar \
-	jre/lib/security/US_export_policy.jar \
+	jre/lib/security/policy \
 	jre/lib/locale \
 	jre/COPYRIGHT \
 	jre/LICENSE \
@@ -300,6 +296,8 @@ binary-$(p_jbin):	build
 	-mv $(d_jbin)/$(basedir)/jre/lib/security/{java.*,cacerts} \
 		$(d_jbin)/$(security)
 
+	sed -i 's,#crypto.policy=unlimited,crypto.policy=unlimited,' $(d_jbin)/$(security)/java.security
+
 	: # create links for the conffiles
 	find $(d_jbin)/etc/$(jdiralias) -type f ! -name jvm.cfg \
 	    -printf "etc/$(jdiralias)/%P $(basedir)/jre/lib/%P\n" >> $(d_jbin).links
@@ -460,9 +458,6 @@ binary-$(p_jre):	build
 	set -e; \
 	tar -c -C $(srcdir) -f - $(common_jre_things) \
 	  | tar -x -C $(d_jre)/$(basedir) -f -
-
-	: # JCE Unlimited Strength Jurisdiction Policy
-	cp -a UnlimitedJCEPolicyJDK8/*.jar $(d_jre)/$(basedir)/jre/lib/security/
 
 	: # add lintian overrides
 	cp -p debian/$(p_jre).overrides \
