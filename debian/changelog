@@ -1,3 +1,38 @@
+oracle-java8 (8.161-1) stable; urgency=high
+
+  * Support DHE sizes up to 8192-bits and DSA sizes up to 3072-bits
+  * Negotiated Finite Field Diffie-Hellman Ephemeral Parameters for TLS
+  * Restrict Diffie-Hellman keys less than 1024 bits
+  * Disable exportable cipher suites
+  * Unlimited cryptography enabled by default
+  * SECURITY UPDATE:
+    - (CVE-2018-2638): unspecified vulnerability fixed in 8u161 (Deployment)
+    - (CVE-2018-2639): unspecified vulnerability fixed in 8u161 (Deployment)
+    - (CVE-2018-2633): LDAPCertStore insecure handling of LDAP referrals (JNDI)
+    - (CVE-2018-2627): unspecified vulnerability fixed in 8u161 (Installer)
+    - (CVE-2018-2637): SingleEntryRegistry incorrect setup of deserialization
+                       filter (JMX)
+    - (CVE-2018-2634): use of global credentials for HTTP/SPNEGO (JGSS)
+    - (CVE-2018-2582): insufficient validation of the invokeinterface
+                       instruction (Hotspot)
+    - (CVE-2018-2641): GTK library loading use-after-free (AWT)
+    - (CVE-2018-2618): insufficient strength of key agreement (JCE)
+    - (CVE-2018-2629): GSS context use-after-free (JGSS)
+    - (CVE-2018-2603): DerValue unbounded memory allocation (Libraries)
+    - (CVE-2018-2599): DnsClient missing source port randomization (JNDI)
+    - (CVE-2018-2581): unspecified vulnerability fixed in 8u161 (JavaFX)
+    - (CVE-2018-2602): loading of classes from untrusted locations (I18n)
+    - (CVE-2018-2677): unbounded memory allocation during deserialization (AWT)
+    - (CVE-2018-2678): unbounded memory allocation in BasicAttributes
+                       deserialization (JNDI)
+    - (CVE-2018-2588): LdapLoginModule insufficient username encoding in LDAP
+                       query (LDAP)
+    - (CVE-2018-2663): ArrayBlockingQueue deserialization to an inconsistent
+                       state (Libraries)
+    - (CVE-2018-2579): unsynchronized access to encryption key data (Libraries)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 17 Jan 2018 10:07:45 +0100
+
 oracle-java8 (8.152-1) stable; urgency=medium
 
   * New Java release
