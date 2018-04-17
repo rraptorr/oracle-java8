@@ -1,3 +1,9 @@
+oracle-java8 (8.172-1) stable; urgency=medium
+
+  * New Java release
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 17 Apr 2018 22:30:30 +0200
+
 oracle-java8 (8.171-1) stable; urgency=high
 
   * 3DES cipher suites are disabled by default for SSL/TLS connections.
