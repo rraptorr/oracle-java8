@@ -1,3 +1,22 @@
+oracle-java8 (8.171-1) stable; urgency=high
+
+  * 3DES cipher suites are disabled by default for SSL/TLS connections.
+  * SECURITY UPDATE:
+    - (CVE-2018-2814): unspecified vulnerability fixed in 8u171 (Hotspot)
+    - (CVE-2018-2811): unspecified vulnerability fixed in 8u171 (Install)
+    - (CVE-2018-2794): unspecified vulnerability fixed in 8u171 (Security)
+    - (CVE-2018-2783): unspecified vulnerability fixed in 8u171 (Security)
+    - (CVE-2018-2798): unspecified vulnerability fixed in 8u171 (AWT)
+    - (CVE-2018-2796): unspecified vulnerability fixed in 8u171 (Concurrency)
+    - (CVE-2018-2799): unspecified vulnerability fixed in 8u171 (JAXP)
+    - (CVE-2018-2797): unspecified vulnerability fixed in 8u171 (JMX)
+    - (CVE-2018-2795): unspecified vulnerability fixed in 8u171 (Security)
+    - (CVE-2018-2815): unspecified vulnerability fixed in 8u171 (Serialization)
+    - (CVE-2018-2800): unspecified vulnerability fixed in 8u171 (RMI)
+    - (CVE-2018-2790): unspecified vulnerability fixed in 8u171 (Security)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 17 Apr 2018 19:12:12 +0200
+
 oracle-java8 (8.162-2) stable; urgency=medium
 
   * Exclude new version of libavplugin from shlibdeps to avoid ffmpeg dependency
