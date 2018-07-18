@@ -87,19 +87,3 @@ Description: @vendor@ Java(TM) Development Kit (JDK) @RELEASE@ source files
  .
  This package contains the Java programming language source 
  files (src.zip) for all classes that make up the Java core API.
-
-Package: @basename@-javadb
-Architecture: all
-Section: non-free/java
-Depends: @basename@-jdk (>= ${source:Version}), ${misc:Depends}
-Enhances: @basename@-jdk
-Description: Java(TM) DB, Oracle's distribution of Apache Derby
- Java DB is Oracle's supported distribution of the open source Apache 
- Derby 100% Java technology database. It is fully transactional, secure, 
- easy-to-use, standards-based -- SQL, JDBC API, and Java EE -- yet small, 
- only 2MB.
- .
- This package adds the optional Java DB to your JDK 6 installation.
- .
- For more information, check out the Java DB website:
- http://www.oracle.com/technetwork/java/javadb/overview/index.html

@@ -5,7 +5,6 @@ debian/oracle-java8-jre.README.Debian
 debian/files
 debian/oracle-java8-bin
 debian/oracle-java8-fonts
-debian/oracle-java8-javadb
 debian/oracle-java8-jdk
 debian/oracle-java8-jre
 debian/oracle-java8-plugin

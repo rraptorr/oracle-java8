@@ -33,8 +33,8 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 11
-downloadhash	:= a58eab1ec242421181065cdc37240b08
+jdkbuild	:= 13
+downloadhash	:= 96a7b8442fe848ef90c96a2fad6ed6d1
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
@@ -69,8 +69,8 @@ get-orig-source:
 	  curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jdk/$(version)u$(releng_ver)-b$(jdkbuild)/$(downloadhash)/jdk-$(version)u$(releng_ver)-linux-$$arch.tar.gz; \
 	done
-	echo "28a00b9400b6913563553e09e8024c286b506d8523334c93ddec6c9ec7e9d346  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
-	echo "0a4310d31246924d5c3cd161b9da7f446acef373e6484452c80de8d8519f5a33  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
+	echo "1845567095bfbfebd42ed0d09397939796d05456290fb20a83c476ba09f991d3  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
+	echo "d78a023abffb7ce4aade43e6db64bbad5984e7c82c54c332da445c9a79c1a904  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
 
 info:
 	@echo Build information
@@ -95,7 +95,6 @@ p_jdk	:= $(basename)-jdk
 p_src	:= $(basename)-source
 p_fonts	:= $(basename)-fonts
 p_plug	:= $(basename)-plugin
-p_javadb	:= $(basename)-javadb
 
 d_jre	:= debian/$(p_jre)
 d_jbin	:= debian/$(p_jbin)
@@ -103,12 +102,11 @@ d_jdk	:= debian/$(p_jdk)
 d_src	:= debian/$(p_src)
 d_fonts	:= debian/$(p_fonts)
 d_plug	:= debian/$(p_plug)
-d_javadb	:= debian/$(p_javadb)
 
 binary_arch_targets	= \
 	$(patsubst %, binary-%, $(p_jbin) $(p_jdk) $(p_plug))
 binary_indep_targets	:= \
-	$(patsubst %, binary-%, $(p_jre) $(p_src) $(p_fonts) $(p_javadb))
+	$(patsubst %, binary-%, $(p_jre) $(p_src) $(p_fonts))
 
 # (most) jre and jdk tools handled by the alternatives system.
 # dups in heimdal-clients, krb5-user: kinit, klist, ktab, no alternatives
@@ -587,28 +585,6 @@ binary-$(p_src):	build
 	cp -a $(srcdir)/src.zip $(d_src)/$(basedir)/
 
 	ln -s $(p_jdk) $(d_src)/usr/share/doc/$(p_src)
-
-
-binary-$(p_javadb):	DH_OPTIONS=-p$(p_javadb)
-binary-$(p_javadb):	build
-	dh_testdir
-	dh_testroot
-	dh_clean -d
-	dh_installdirs \
-		$(basedir) \
-		$(lintian_overrides) \
-		usr/share/doc/$(p_javadb)
-	cp -a $(srcdir)/db $(d_javadb)/$(basedir)/
-
-	: # add lintian overrides
-	cp -p debian/$(p_javadb).overrides \
-		$(d_javadb)/$(lintian_overrides)/$(p_javadb)
-
-	: # fix permissions
-	-find $(d_javadb) -name '*.bat' | xargs chmod 644
-
-	dh_installdocs
-	dh_installchangelogs
 
 
 binary-indep:	DH_OPTIONS=-i

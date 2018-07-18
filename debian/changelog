@@ -1,3 +1,18 @@
+oracle-java8 (8.181-1) stable; urgency=high
+
+  * JavaDB was removed.
+  * SECURITY UPDATE:
+    - (CVE-2018-2938): unspecified vulnerability fixed in 8u181 (Java DB)
+    - (CVE-2018-2964): unspecified vulnerability fixed in 8u181 (Deployment)
+    - (CVE-2018-2941): unspecified vulnerability fixed in 8u181 (JavaFX)
+    - (CVE-2018-2942): unspecified vulnerability fixed in 8u181 (Windows DLL)
+    - (CVE-2018-2973): unspecified vulnerability fixed in 8u181 (JSSE)
+    - (CVE-2018-2940): unspecified vulnerability fixed in 8u181 (Libraries)
+    - (CVE-2018-2952): insufficient index validation in PatternSyntaxException
+                       getMessage() (Concurrency)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 18 Jul 2018 15:26:22 +0200
+
 oracle-java8 (8.172-1) stable; urgency=medium
 
   * New Java release
