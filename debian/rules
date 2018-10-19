@@ -33,8 +33,8 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 13
-downloadhash	:= 96a7b8442fe848ef90c96a2fad6ed6d1
+jdkbuild	:= 12
+downloadhash	:= 2787e4a523244c269598db4e85c51e0c
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
@@ -69,8 +69,8 @@ get-orig-source:
 	  curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
 	    http://download.oracle.com/otn-pub/java/jdk/$(version)u$(releng_ver)-b$(jdkbuild)/$(downloadhash)/jdk-$(version)u$(releng_ver)-linux-$$arch.tar.gz; \
 	done
-	echo "1845567095bfbfebd42ed0d09397939796d05456290fb20a83c476ba09f991d3  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
-	echo "d78a023abffb7ce4aade43e6db64bbad5984e7c82c54c332da445c9a79c1a904  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
+	echo "53c29507e2405a7ffdbba627e6d64856089b094867479edc5ede4105c1da0d65  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
+	echo "b7fe48dd5d82d5fa947289c9a71959e29a03d8bcd8b305a7f7629ebf7f471854  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
 
 info:
 	@echo Build information
