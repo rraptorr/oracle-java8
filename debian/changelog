@@ -1,3 +1,15 @@
+oracle-java8 (8.201-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2018-11212): libjpeg-turbo: Divide By Zero in alloc_sarray function
+                        in jmemmgr.c (ImageIO (libjpeg))
+    - (CVE-2019-2426): transparent NTLM authentication enabled by default
+                       (Networking)
+    - (CVE-2019-2449): unspecified vulnerability fixed in 8u201 (Deployment)
+    - (CVE-2019-2422): memory disclosure in FileChannelImpl (Libraries)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Tue, 15 Jan 2019 20:10:53 +0100
+
 oracle-java8 (8.192-1) stable; urgency=medium
 
   * New Java release
