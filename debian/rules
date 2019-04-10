@@ -381,6 +381,7 @@ binary-$(p_jbin):	build
 		-l$(basedir)/jre/lib/$(archdir)/server \
 		-Xlibnpjp2.so -Xlibavplugin-53.so -Xlibavplugin-54.so -Xlibavplugin-55.so -Xlibavplugin-56.so -Xlibavplugin-57.so -Xlibavplugin-ffmpeg-56.so -Xlibavplugin-ffmpeg-57.so -Xlibdecora_sse.so \
 		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
+		-Xlibglassgtk3.so \
 		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
 
@@ -398,6 +399,7 @@ binary-$(p_jbin):	build
 		-Xlibsplashscreen -Xlibmlib -Xlibdeploy \
 		-Xlibavplugin-53.so -Xlibavplugin-54.so -Xlibavplugin-55.so -Xlibavplugin-56.so -Xlibavplugin-57.so -Xlibavplugin-ffmpeg-56.so -Xlibavplugin-ffmpeg-57.so -Xlibdecora_sse.so \
 		-Xlibfxplugins.so -Xlibglass.so -Xlibgstreamer-lite.so \
+		-Xlibglassgtk3.so \
 		-Xlibjavafx -Xlibjfx -Xlibprism \
 		-- --warnings=0
 	sed -i -e 's/ *([^,]*) *//g' $(d_jbin).substvars

@@ -3,7 +3,7 @@ Section: non-free/java
 Priority: optional
 Maintainer: Janusz Dziemidowicz <rraptorr@nails.eu.org>
 Homepage: http://www.oracle.com/technetwork/java/javase/downloads/index.html
-Build-Depends: debhelper (>= 9), lsb-release, unzip, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxt6, libxtst6, libxrender1, curl
+Build-Depends: debhelper (>= 9), lsb-release, unzip, libasound2, unixodbc, libx11-6, libxext6, libxi6, libxt6, libxtst6, libxrender1, libgtk2.0-0, libcairo2, libpango1.0-0, curl
 Standards-Version: 3.9.6
 
 Package: oracle-java8-jre
