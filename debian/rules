@@ -33,8 +33,6 @@ dirpartsv	:= $(shell dpkg-parsechangelog | sed -ne '/Version:/ s,Version: \(.*\)
 version		:= $(word 1, $(dirpartsv))
 releng_ver	:= $(word 2, $(dirpartsv))
 jdkversion	:= 1.$(version).0
-jdkbuild	:= 08
-downloadhash	:= 1961070e4c9b4e26a04e7f5a083f551e
 jdirname	:= java-$(version)-$(VENDOR)-$(jdkversion).$(releng_ver)
 jdiralias	:= java-$(version)-$(VENDOR)
 srcdir		:= $(arch)
@@ -63,14 +61,6 @@ cjk_fonts += ttf-kochi-mincho | ttf-sazanami-mincho,
 cjk_fonts += ttf-arphic-uming,
 
 lintian_overrides	:= usr/share/lintian/overrides
-
-get-orig-source:
-	@for arch in x64 i586; do \
-	  curl -fL --retry 3 --retry-delay 3 -O --header 'Cookie: oraclelicense=accept-securebackup-cookie' \
-	    http://download.oracle.com/otn-pub/java/jdk/$(version)u$(releng_ver)-b$(jdkbuild)/$(downloadhash)/jdk-$(version)u$(releng_ver)-linux-$$arch.tar.gz; \
-	done
-	echo "9a5c32411a6a06e22b69c495b7975034409fa1652d03aeb8eb5b6f59fd4594e0  jdk-$(version)u$(releng_ver)-linux-x64.tar.gz" | sha256sum -c
-	echo "f2dd10a94c6b05e8b475a3a45233150440c10f3020d44ad3c00d37de441ad7a6  jdk-$(version)u$(releng_ver)-linux-i586.tar.gz" | sha256sum -c
 
 info:
 	@echo Build information
