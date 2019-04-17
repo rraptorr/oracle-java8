@@ -26,7 +26,7 @@ To create packages on your own:
 - apt-get install debhelper
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
-- download jdk-8u211-linux-x64.tar.gz and jdk-8u211-linux-i586.tar.gz
+- download jdk-8u212-linux-x64.tar.gz and jdk-8u212-linux-i586.tar.gz
 - sh ./prepare.sh
 - dpkg-buildpackage -uc -us
 - install any missing packages that dpkg-buildpackage complains about
