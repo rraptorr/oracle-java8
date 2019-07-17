@@ -22,8 +22,8 @@ if [ ! -f jdk-${major}u${minor}-linux-i586.tar.gz ] ; then
   exit 1
 fi
 
-echo "3160c50aa8d8e081c8c7fe0f859ea452922eca5d2ae8f8ef22011ae87e6fedfb  jdk-${major}u${minor}-linux-x64.tar.gz" | sha256sum -c
-echo "c1ca08b1032b1c6e4fe4e2516ce00984bf3ca987897ee2c2382b8eb8004eb20d  jdk-${major}u${minor}-linux-i586.tar.gz" | sha256sum -c
+echo "bac52b7f120a03c4c0815ca8fc77c02a8f3db2ded121ffad7449525f377e2479  jdk-${major}u${minor}-linux-x64.tar.gz" | sha256sum -c
+echo "3237b483d36dfd3c8eccc9b56d84771efe2dd6803b97723b0826a87754134533  jdk-${major}u${minor}-linux-i586.tar.gz" | sha256sum -c
 
 rm -rf "$dir"/i586 "$dir"/jdk1.${major}.0_${minor}
 tar xf "$dir"/jdk-${major}u${minor}-linux-i586.tar.gz -C "$dir"

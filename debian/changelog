@@ -1,3 +1,22 @@
+oracle-java8 (8.221-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2019-7317): libpng: use-after-free in png_image_free in png.c (AWT)
+    - (CVE-2019-2762): Insufficient checks of suppressed exceptions in
+                       deserialization (Utilities)
+    - (CVE-2019-2769): Unbounded memory allocation during deserialization in
+                       Collections (Utilities)
+    - (CVE-2019-2745): Side-channel attack risks Elliptic Curve (EC)
+                       cryptography (Security)
+    - (CVE-2019-2816): Missing URL format validation (Networking)
+    - (CVE-2019-2842): Missing array bounds check in crypto providers (JCE)
+    - (CVE-2019-2786): Insufficient restriction of privileges in
+                       AccessController (Security)
+    - (CVE-2019-2766): Insufficient permission checks for file:// URLs on
+                       Windows (Networking)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 17 Jul 2019 11:16:44 +0200
+
 oracle-java8 (8.212-1) stable; urgency=medium
 
   * New Java release
