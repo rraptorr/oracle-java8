@@ -23,7 +23,7 @@ Usage
 
 To create packages on your own:
 
-- apt-get install debhelper
+- apt install debhelper unixodbc libpango1.0-0
 - git clone git://github.com/rraptorr/oracle-java8.git
 - cd oracle-java8
 - download jdk-8u221-linux-x64.tar.gz and jdk-8u221-linux-i586.tar.gz
