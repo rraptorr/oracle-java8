@@ -10,9 +10,9 @@ Supported Debian versions
 
 So far packages were tested on following Debian versions:
 
+- buster i386/amd64
 - stretch i386/amd64
 - jessie i386/amd64
-- wheezy i386/amd64
 
 I do not have resources to test packages on Ubuntu. However, if one
 finds any problem on Ubuntu, feel free to report an issue and I will
