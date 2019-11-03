@@ -1,3 +1,28 @@
+oracle-java8 (8.231-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2019-2949): Improper handling of Kerberos proxy credentials (Kerberos)
+    - (CVE-2019-2989): Incorrect handling of HTTP proxy responses in HttpURLConnection (Networking)
+    - (CVE-2019-2958): unspecified vulnerability fixed in 8u231 (Libraries)
+    - (CVE-2019-11068): xsltCheckRead and xsltCheckWrite routines security bypass by crafted URL (JavaFX (libxslt))
+    - (CVE-2019-2975): Unexpected exception thrown during regular expression processing in Nashorn (Scripting)
+    - (CVE-2019-2999): Insufficient filtering of HTML event attributes in Javadoc (Javadoc)
+    - (CVE-2019-2996): unspecified vulnerability fixed in 8u231 (Deployment)
+    - (CVE-2019-2987): Missing glyph bitmap image dimension check in FreetypeFontScaler (2D)
+    - (CVE-2019-2962): NULL pointer dereference in DrawGlyphList (2D)
+    - (CVE-2019-2988): Integer overflow in bounds check in SunGraphics2D (2D)
+    - (CVE-2019-2992): Excessive memory allocation in CMap when reading TrueType font (2D)
+    - (CVE-2019-2964): Unexpected exception thrown by Pattern processing crafted regular expression (Concurrency)
+    - (CVE-2019-2973): Unexpected exception thrown by XPathParser processing crafted XPath expression (JAXP)
+    - (CVE-2019-2981): Unexpected exception thrown by XPath processing crafted XPath expression (JAXP)
+    - (CVE-2019-2978): Incorrect handling of nested jar: URLs in Jar URL handler (Networking)
+    - (CVE-2019-2894): unspecified vulnerability fixed in 8u231 (Security)
+    - (CVE-2019-2983): Unexpected exception thrown during Font object deserialization (Serialization)
+    - (CVE-2019-2933): unspecified vulnerability fixed in 8u231 (Libraries)
+    - (CVE-2019-2945): Missing restrictions on use of custom SocketImpl (Networking)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Sun, 03 Nov 2019 11:00:40 +0100
+
 oracle-java8 (8.221-1) stable; urgency=high
 
   * SECURITY UPDATE:
