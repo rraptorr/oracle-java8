@@ -1,3 +1,16 @@
+oracle-java8 (8.241-1) stable; urgency=high
+
+  * SECURITY UPDATE:
+    - (CVE-2020-2604): Serialization filter changes via jdk.serialFilter property modification (Serialization)
+    - (CVE-2020-2601): Use of unsafe RSA-MD5 checkum in Kerberos TGS (Security)
+    - (CVE-2020-2593): Incorrect isBuiltinStreamHandler causing URL normalization issues (Networking)
+    - (CVE-2020-2654): Excessive memory usage in OID processing in X.509 certificate parsing (Libraries)
+    - (CVE-2020-2590): Improper checks of SASL message properties in GssKrb5Base (Security)
+    - (CVE-2020-2659): unspecified vulnerability fixed in 8u241 (Networking)
+    - (CVE-2020-2659): Incorrect exception processing during deserialization in BeanContextSupport (Serialization)
+
+ -- Janusz Dziemidowicz <rraptorr@nails.eu.org>  Wed, 15 Jan 2020 13:20:07 +0100
+
 oracle-java8 (8.231-1) stable; urgency=high
 
   * SECURITY UPDATE:
